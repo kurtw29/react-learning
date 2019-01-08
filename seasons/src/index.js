@@ -4,12 +4,12 @@ import ReactDOM from 'react-dom';
 class App extends React.Component {
     // 'constructor' not required by React, specific function particular to JavaScript language.
     // in JavaScript class, the 'constructor' function is automatically and instantly called before anything else when a new instance of the class is created (eg. 'App' component)
-    constructor(props) {  
-        super(props);   //inherit parent's constructor function (from React.Component)
-
-        this.state = { lat: null, errorMessage: "" };
-    }
+    // constructor(props) {  
+    //     super(props);   //inherit parent's constructor function (from React.Component)
+    // }
     
+    state = { lat: null, errorMessage: ""};
+
     componentDidMount(){
         window.navigator.geolocation.getCurrentPosition(
             (position) => {

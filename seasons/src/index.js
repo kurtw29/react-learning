@@ -8,7 +8,9 @@ class App extends React.Component {
         super(props);   //inherit parent's constructor function (from React.Component)
 
         this.state = { lat: null, errorMessage: "" };
-
+    }
+    
+    componentDidMount(){
         window.navigator.geolocation.getCurrentPosition(
             (position) => {
                 // console.log(position);

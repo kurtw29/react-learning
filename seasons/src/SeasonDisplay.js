@@ -16,7 +16,7 @@ const getSeason = (lat, month) => {
     if(month > 2 && month < 9){
         return lat > 0 ? 'summer' : 'winter'; //if lat > 0, then return summer, otherwise return winter;
     }else{
-        return lat > 0 ? 'summer' : 'winter';
+        return lat > 0 ? 'winter' : 'summer';
     }
 }
 

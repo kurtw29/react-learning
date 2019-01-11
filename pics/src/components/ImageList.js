@@ -1,11 +1,12 @@
 import React from 'react';
+import ImageCard from './ImageCard';
 import './ImageList.css';
 
 const ImageList = (props) => {
     const images = props.images.map( (image) => {
         return (
             // <div key={image.id}></div>   //put the "key" property in root tag if there's one
-            <img key={image.id} src={image.urls.regular} alt={image.description} />
+            <ImageCard key={image.id} image={image} />
             );
         })
         //avoid referencing "image" repeatedly "image.id, image.urls, image.desc.." to clean up code format by destructuring the "image" object
